@@ -1,0 +1,51 @@
+consent_number,business_name,address,pin_code,pan,gstin,owner_name,phone,email,consent_date
+KSPCB-C-8000,Ghosh Inc,"Plot 86-D, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,FKBJZ2744X,,Tushar Dhar,+917849808412,,2020-12-21
+KSPCB-C-8001,Ramakrishnan-Cheema,"Plot 98-C, Bommasandra Industrial Area, BLR 560100",560100,BTBIB4950Q,29BTBIB4950Q1ZM,Lagan Sankar,4874016400,,2023-11-09
+KSPCB-C-8002,Sastry Kala and Mand,"Plt 35-B, Peenya Industrial Area Ph 1, 560058",560058,YOPBC6532V,,Faiyaz Barad,,,2020-08-01
+KSPCB-C-8003,Behl Goel and Sridhar,"Plot 203-B, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,,,Miraya Shere,+913226025634,,2022-11-06
+KSPCB-C-8004,Varughese Group,"Plt 162-A, Electronic City Ph 1, 560100",560100,QOCNN1302J,29QOCNN1302J1ZM,Krish Taneja,05433036541,stuvan86@example.net,2021-12-21
+KSPCB-C-8005,Bhardwaj LLC,"Plot 271-A, Electronic City Phase 2, Bengaluru - 560100",560100,,,Kavya Deo,+911965569816,onkarbains@example.net,2023-10-04
+KSPCB-C-8006,Lad PLC,"Plot 54-B, Electronic City Phase 2, BLR 560100",560100,XTEHF3685I,,Tejas Kale,+915951484656,,2022-10-15
+KSPCB-C-8007,Shere Zacharia and,"Plt 217-C, Peenya Industrial Area Ph 1, 560058",560058,IDZEL7519W,,Yuvaan Mahal,+914436995777,,2019-03-24
+KSPCB-C-8008,Basakdharandkurian Pvt Ltd,"Plot 299-E, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,DIXUW8221Y,29DIXUW8221Y1ZM,Divij Tank,+914332003791,,2019-08-25
+KSPCB-C-8009,Sarinhandaandkota Pvt Ltd,"Plt 80-B, Electronic City Ph 2, 560100",560100,,,Nirvaan Borah,0163287083,,2021-09-26
+KSPCB-C-8010,Ramesh-Tandon,"Plot 13-B, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,,,Ira Kapoor,+917743487347,,2020-12-17
+KSPCB-C-8011,Dutta-Warrior,"Plt 128-C, Electronic City Ph 1, 560100",560100,SJBMF9388H,29SJBMF9388H1ZM,Hiran Borra,+916231665876,,2016-09-02
+KSPCB-C-8012,GUPTA KHARE AND AGGARWAL,"Peenya Industrial Area Phase 2, Plot 169-C, Bengaluru",560058,,,Rohan Shetty,06889373467,hayershayak@example.net,2023-03-21
+KSPCB-C-8013,Butala Trivedi and Kaur,"Plot 261-D, Electronic City Phase 1, BLR 560100",560100,,,Misha Loke,+916990162720,,2021-11-24
+KSPCB-C-8014,Sidhu-Wable,"Plt 60-C, Bommasandra Industrial Area, 560100",560100,ZGCLS3653S,29ZGCLS3653S1ZM,Ranbir Shetty,04170805310,dasguptakrish@example.org,2018-12-06
+KSPCB-C-8015,BHATNAGAR GROUP,"Plt 224-A, Peenya Ph 3, 560058",560058,URYTF4996V,,Jivika Chopra,04529912419,,2022-09-22
+KSPCB-C-8016,Sehgal-Chaudhary,"Plot 159-D, Electronic City Phase 2, BLR 560100",560100,SOERJ7154A,29SOERJ7154A1ZM,Kiara Sant,3149190586,,2023-06-27
+KSPCB-C-8017,Bera-Kalita,"Plt 297-E, Peenya Industrial Area Ph 2, 560058",560058,,,Myra Walla,02628498776,samarth31@example.com,2024-01-04
+KSPCB-C-8018,Sheth Group,"Plot 227-B, Electronic City Phase 1, BLR 560100",560100,UYTRH6609H,29UYTRH6609H1ZM,Shayak Atwal,05273545494,kuruvillakanav@example.org,2020-06-11
+KSPCB-C-8019,Jani Konda and Mall,"Peenya Industrial Area Phase 1, Plot 76-A, Bengaluru",560058,ZPTLX5733E,29ZPTLX5733E1ZM,Prisha Khanna,7701436349,,2023-07-30
+KSPCB-C-8020,Maharaj Gandhi and Goda,"Plt 218-B, Peenya Industrial Area Ph 1, 560058",560058,YNBGW4869T,29YNBGW4869T1ZM,Purab Dua,,,2021-02-25
+KSPCB-C-8021,Thaman and Sons,"Plot 259-D, Electronic City Phase 2, BLR 560100",560100,,,Manikya Gole,+914082400842,,2021-03-05
+KSPCB-C-8022,Khatri-Kannan,"Plt 244-D, Bommasandra Industrial Area, 560100",560100,GQTNQ2022K,,Kabir Bal,07116719022,dharmajan31@example.net,2023-06-03
+KSPCB-C-8023,Raju Subramanian and Ranganathan,"Peenya Industrial Area Phase 1, Plot 78-B, Bengaluru",560058,DFKIM0837W,29DFKIM0837W1ZM,Urvi Lal,,singhlakshay@example.net,2019-12-06
+KSPCB-C-8024,Sahota-Baria,"Plot 4-C, Electronic City Phase 1, Bengaluru - 560100",560100,KXVNT7842P,29KXVNT7842P1ZM,Nakul Chadha,1206797403,,2020-04-23
+KSPCB-C-8025,Subramaniam-Sule Pvt Ltd,"Electronic City Phase 2, Plot 208-B, Bengaluru",560100,,,Aarna Bhandari,3242102499,advika17@example.net,2021-07-06
+KSPCB-C-8026,Jaggi Deshpande and Krishna,"Peenya Phase 3, Plot 274-A, Bengaluru",560058,,,Advika Baria,0659401399,singhalpari@example.com,2017-01-08
+KSPCB-C-8027,Keer PLC,"Peenya Industrial Area Phase 1, Plot 220-B, Bengaluru",560058,,,Ranbir Chana,6717565512,,2023-02-25
+KSPCB-C-8028,Badami Karan and,"Plot 134-D, Peenya Industrial Area Phase 1, BLR 560058",560058,LIWHY4847B,,Ojas Edwin,+916808760385,crattan@example.org,2019-10-20
+KSPCB-C-8029,Maharaj-Bhatti,"Bommasandra Industrial Area, Plot 36-A, Bengaluru",560100,,,Advika Wable,7109324808,obatra@example.org,2024-03-10
+KSPCB-C-8030,Sabharwal and Sons,"Plot 11-E, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,DROFS7167D,,Saanvi Dhingra,4677378263,darshitdevi@example.com,2022-02-13
+KSPCB-C-8031,Deol Tara and Agarwal,"Plt 56-E, Peenya Industrial Area Ph 2, 560058",560058,IRYKS0661Y,29IRYKS0661Y1ZM,Samaira Dixit,9727875588,ukari@example.org,2020-05-26
+KSPCB-C-8032,Handa Dada and Varty,"Plot 22-C, Peenya Phase 3, BLR 560058",560058,RBQAK4438O,,Azad Dutt,7662702895,,2025-04-15
+KSPCB-C-8033,Amble-Sen,"Plot 268-C, Bommasandra Industrial Area, Bengaluru - 560100",560100,,,Yuvraj  Virk,2174596158,,2024-08-22
+KSPCB-C-8034,Badamiranganathanand Pvt Ltd,"Electronic City Phase 1, Plot 224-E, Bengaluru",560100,WVCWG4630K,29WVCWG4630K1ZM,Mohanlal Sani,03161172400,yashvi04@example.com,2022-09-19
+KSPCB-C-8035,Bora-Das,"Plot 133-C, Peenya Industrial Area Phase 2, BLR 560058",560058,PWONE2452P,29PWONE2452P1ZM,Jivika Sanghvi,+912219693792,,2024-02-27
+KSPCB-C-8036,Sama-Agrawal,"Electronic City Phase 1, Plot 9-A, Bengaluru",560100,KGRJO3953O,29KGRJO3953O1ZM,Reyansh Sandhu,,,2018-02-25
+KSPCB-C-8037,Halder PLC,"Plt 62-B, Bommasandra Industrial Area, 560100",560100,TYRET2575D,,Kashvi Divan,4064090974,,2020-01-24
+KSPCB-C-8038,Chandran Rao and Dass,"Plt 185-B, Bommasandra Industrial Area, 560100",560100,SDBBH9671A,29SDBBH9671A1ZM,Mishti Bava,0470952145,mchahal@example.org,2022-07-25
+KSPCB-C-8039,Krishna Deshpande and Thakur,"Plot 226-C, Electronic City Phase 1, Bengaluru - 560100",560100,BYMVK0601S,,Onkar Tella,,,2020-11-02
+KSPCB-C-8040,Bhatiakaranandgour Pvt Ltd,"Plot 61-E, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,,,Keya Halder,5137098593,ravianahi@example.net,2021-06-24
+KSPCB-C-8041,JAYARAMAN BHARDWAJ AND BOASE,"Plot 195-D, Peenya Phase 3, BLR 560058",560058,,,Armaan Doshi,01138267586,,2024-08-30
+KSPCB-C-8042,Jani Dey and Babu,"Electronic City Phase 2, Plot 220-C, Bengaluru",560100,BYCTQ2025F,29BYCTQ2025F1ZM,Madhav Kapadia,03515850643,,2019-12-12
+KSPCB-C-8043,Reddy Raju and Anne,"Plot 241-C, Electronic City Phase 2, Bengaluru - 560100",560100,HHWBG2758G,29HHWBG2758G1ZM,Vedika Ganesan,+912931839335,,2016-05-21
+KSPCB-C-8044,Varughese-Bora,"Plot 77-C, Peenya Phase 3, BLR 560058",560058,,,Hrishita Dass,+911020539502,baiju26@example.net,2018-04-10
+KSPCB-C-8045,Balay Khanna and,"Peenya Industrial Area Phase 1, Plot 85-C, Bengaluru",560058,VXLMH4254T,29VXLMH4254T1ZM,Drishya Rajagopalan,+917839084700,,2018-03-05
+KSPCB-C-8046,Sawhney-Kapadia,"Plot 166-E, Electronic City Phase 2, BLR 560100",560100,CZVOY9620Y,29CZVOY9620Y1ZM,Dhanush Dyal,2124998569,,2018-01-10
+KSPCB-C-8047,BHANDARI VARKEY AND SAGAR,"Electronic City Phase 1, Plot 93-E, Bengaluru",560100,VZMKI1144V,,Adah Kara,+916576615654,indrans71@example.org,2017-10-16
+KSPCB-C-8048,Kalita Inc,"Peenya Industrial Area Phase 2, Plot 46-C, Bengaluru",560058,DUWVA8405T,,Zoya Bhattacharyya,,kismat45@example.org,2024-12-20
+KSPCB-C-8049,Brahmbhatt Ltd,"Plt 105-C, Bommasandra Industrial Area, 560100",560100,YLSDZ6215R,29YLSDZ6215R1ZM,Mamooty Vaidya,+915851493689,ramanathannirvi@example.net,2020-11-20

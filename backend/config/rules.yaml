@@ -1,0 +1,121 @@
+# config/rules.yaml
+# ─────────────────────────────────────────────────────────────────
+#  ALL business rules live here. No hardcoded values in Python.
+#  A domain analyst can tune weights without touching code.
+# ─────────────────────────────────────────────────────────────────
+
+matching:
+  auto_link_threshold: 0.85   # score >= this → auto-link
+  review_threshold: 0.50      # score between this and auto_link → human review
+  # score < review_threshold → keep separate
+
+  feature_weights:
+    name_jaro_winkler: 0.18
+    name_token_sort: 0.14
+    pin_code_exact: 0.15
+    locality_similarity: 0.10
+    plot_similarity: 0.05
+    pan_exact: 0.30           # near-deterministic anchor
+    gstin_exact: 0.28         # near-deterministic anchor
+    phone_exact: 0.08
+
+  # PAN/GSTIN match sets a hard score floor regardless of other signals
+  pan_gstin_hard_floor: 0.88
+
+activity_classification:
+  active_min_score: 0.35      # score >= this → Active
+  closed_max_score: 0.05      # score <= this → Closed; between → Dormant
+
+  event_weights:
+    utility_reading:
+      base_weight: 0.45
+      half_life_days: 90
+      description: "Electricity/water consumption reading"
+    licence_renewal:
+      base_weight: 0.30
+      half_life_days: 365
+      description: "Licence renewed for another period"
+    inspection_pass:
+      base_weight: 0.20
+      half_life_days: 180
+      description: "Inspection completed with satisfactory outcome"
+    compliance_filing:
+      base_weight: 0.18
+      half_life_days: 120
+      description: "Compliance document or return filed"
+    inspection_fail:
+      base_weight: 0.08
+      half_life_days: 90
+      description: "Inspection completed but with issues (still indicates activity)"
+    licence_lapsed:
+      base_weight: -0.25
+      half_life_days: 180
+      description: "Licence expired and not renewed"
+    no_consumption:
+      base_weight: -0.20
+      half_life_days: 90
+      description: "Explicit zero-consumption flag from utility dept"
+
+departments:
+  shop_establishment:
+    display_name: "Shop & Establishment"
+    id_field: reg_number
+    required_columns: [reg_number, business_name, address, pin_code]
+    optional_columns: [pan, gstin, owner_name, phone, email, reg_date]
+  factories:
+    display_name: "Factories"
+    id_field: reg_number
+    required_columns: [reg_number, business_name, address, pin_code]
+    optional_columns: [pan, gstin, owner_name, phone, email, reg_date]
+  labour:
+    display_name: "Labour"
+    id_field: reg_number
+    required_columns: [reg_number, business_name, address, pin_code]
+    optional_columns: [pan, gstin, owner_name, phone, email, reg_date]
+  kspcb:
+    display_name: "KSPCB"
+    id_field: consent_number
+    required_columns: [consent_number, business_name, address, pin_code]
+    optional_columns: [pan, gstin, owner_name, phone, email, consent_date]
+  bescom:
+    display_name: "BESCOM"
+    id_field: account_number
+    required_columns: [account_number, business_name, pin_code]
+    optional_columns: [address, pan, gstin]
+
+valid_pin_codes:
+  - "560058"
+  - "560100"
+  - "560010"
+  - "560001"
+  - "560002"
+  - "560003"
+  - "560004"
+  - "560005"
+
+locality_synonyms:
+  "peenya ph-2": "Peenya Industrial Area Phase 2"
+  "peenya phase 2": "Peenya Industrial Area Phase 2"
+  "peenya 2nd phase": "Peenya Industrial Area Phase 2"
+  "peenya ph 2": "Peenya Industrial Area Phase 2"
+  "indl area": "Industrial Area"
+  "indl estate": "Industrial Estate"
+  "ind area": "Industrial Area"
+
+abbreviations:
+  "pvt": "private"
+  "ltd": "limited"
+  "llp": "limited liability partnership"
+  "mfg": "manufacturing"
+  "engg": "engineering"
+  "ind": "industries"
+  "co": "company"
+  "corp": "corporation"
+  "intl": "international"
+  "natl": "national"
+  "tech": "technologies"
+  "sys": "systems"
+  "soln": "solutions"
+  "mgmt": "management"
+  "dev": "developers"
+  "grp": "group"

@@ -1,0 +1,71 @@
+reg_number,business_name,address,pin_code,pan,gstin,owner_name,phone,email,reg_date
+SHE-BE-10000,Bhalla Arora and Shanker,"Plot 141-B, Peenya Industrial Area Phase 1, BLR 560058",560058,TRXCK0250G,,Nirvaan Choudhury,+911819600133,mandkiaan@example.net,2023-06-23
+SHE-BE-10001,KAPUR PLC,"Plot 230-E, Bommasandra Industrial Area, BLR 560100",560100,WTEKH2713L,,Zoya Virk,+912654235116,golashray@example.net,2020-11-02
+SHE-BE-10002,SETHI GROUP,"Plot 236-E, Bommasandra Industrial Area, Bengaluru - 560100",560100,XCHQX3106Y,29XCHQX3106Y1ZM,Uthkarsh Baral,4959310341,divyanshgupta@example.com,2024-01-20
+SHE-BE-10003,Tiwari Gopal and,"Plt 52-D, Peenya Industrial Area Ph 1, 560058",560058,,29QJJFG9661X1ZM,Sumer Cheema,4192832764,piyagaba@example.org,2020-03-27
+SHE-BE-10004,Swaminathan LLC,"Plt 139-E, Electronic City Ph 1, 560100",560100,,29ITBVU4095W1ZM,Priyansh Bali,+919537672423,siya96@example.net,2023-02-18
+SHE-BE-10005,Choudhary-Biswas,"Plt 235-B, Electronic City Ph 1, 560100",560100,GOGPX3295C,,Divij Shroff,+911226916697,ishita01@example.net,2020-11-16
+SHE-BE-10006,Gardebhallaanddin Pvt Ltd,"Plot 82-D, Peenya Industrial Area Phase 1, BLR 560058",560058,KPMGO9618Y,,Indranil Karan,+914828148932,tarini28@example.net,2016-05-07
+SHE-BE-10007,Edwin Konda and Andra,"Plt 151-D, Bommasandra Industrial Area, 560100",560100,,29ASSZT5168Q1ZM,Taran Vyas,03039117182,nirvikhanna@example.net,2019-02-24
+SHE-BE-10008,Lalla-Viswanathan,"Peenya Industrial Area Phase 2, Plot 83-E, Bengaluru",560058,,,Lakshit Madan,3465787133,garaakarsh@example.net,2020-04-02
+SHE-BE-10009,Choudhary Aggarwal and Banik,"Peenya Phase 3, Plot 166-D, Bengaluru",560058,,,Manikya Bandi,+915183473829,ydara@example.com,2023-04-07
+SHE-BE-10010,Batta Inc,"Plot 244-E, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,,29NPZYT6736L1ZM,Sumer Kakar,07010651333,bboase@example.org,2021-01-28
+SHE-BE-10011,Dash-Vohra,"Plot 127-B, Bommasandra Industrial Area, Bengaluru - 560100",560100,AOPAS0003Q,,Ahana  Swamy,1080132677,yakshitzacharia@example.org,2019-02-21
+SHE-BE-10012,AGARWAL-HAYER,"Plt 277-B, Bommasandra Industrial Area, 560100",560100,,,Vardaniya Srinivasan,04687234309,shenoysaksham@example.org,2017-03-11
+SHE-BE-10013,Khare Krishnamurthy and Varkey,"Plot 243-D, Bommasandra Industrial Area, Bengaluru - 560100",560100,CLLMS6904K,,Bhavin Kumar,+912191361939,raodhanush@example.com,2025-03-26
+SHE-BE-10014,De-Chaudry,"Plt 99-B, Peenya Industrial Area Ph 1, 560058",560058,,,Nakul Deo,02475107991,luthralakshit@example.net,2020-11-06
+SHE-BE-10015,Ghosh Inc,"Peenya Industrial Area Phase 1, Plot 86-D, Bengaluru",560058,,,Tushar Dhar,+917849808412,farhan18@example.org,2020-12-21
+SHE-BE-10016,Ramakrishnan-Cheema,"Plot 98-C, Bommasandra Industrial Area, Bengaluru - 560100",560100,BTBIB4950Q,,Lagan Sankar,4874016400,trisha24@example.org,2023-11-09
+SHE-BE-10017,Sastry Kala and Mand,"Peenya Industrial Area Phase 1, Plot 35-B, Bengaluru",560058,YOPBC6532V,,Faiyaz Barad,2805982620,tejas05@example.org,2020-08-01
+SHE-BE-10018,Behl Goel and,"Plot 203-B, Peenya Industrial Area Phase 2, BLR 560058",560058,,,Miraya Shere,+913226025634,vedikasarna@example.org,2022-11-06
+SHE-BE-10019,VARUGHESE GROUP,"Electronic City Phase 1, Plot 162-A, Bengaluru",560100,QOCNN1302J,,Krish Taneja,05433036541,stuvan86@example.net,2021-12-21
+SHE-BE-10020,Bhardwaj LLC,"Plot 271-A, Electronic City Phase 2, Bengaluru - 560100",560100,,,Kavya Deo,+911965569816,onkarbains@example.net,2023-10-04
+SHE-BE-10021,Lad PLC,"Plot 54-B, Electronic City Phase 2, Bengaluru - 560100",560100,XTEHF3685I,,Tejas Kale,+915951484656,ishita23@example.com,2022-10-15
+SHE-BE-10022,Shere Zacharia and Chahal,"Plot 217-C, Peenya Industrial Area Phase 1, BLR 560058",560058,,,Yuvaan Mahal,+914436995777,diyakhalsa@example.net,2019-03-24
+SHE-BE-10023,BASAK DHAR AND KURIAN,"Plt 299-E, Peenya Industrial Area Ph 2, 560058",560058,DIXUW8221Y,,Divij Tank,+914332003791,ojohal@example.net,2019-08-25
+SHE-BE-10024,Sarin Handa and Kota,"Plot 80-B, Electronic City Phase 2, Bengaluru - 560100",560100,,,Nirvaan Borah,0163287083,karihimmat@example.com,2021-09-26
+SHE-BE-10025,Ramesh-Tandon,"Peenya Industrial Area Phase 2, Plot 13-B, Bengaluru",560058,,,Ira Kapoor,+917743487347,saxenareyansh@example.org,2020-12-17
+SHE-BE-10026,DUTTA-WARRIOR,"Plot 128-C, Electronic City Phase 1, Bengaluru - 560100",560100,SJBMF9388H,29SJBMF9388H1ZM,Hiran Borra,+916231665876,chauhanaaina@example.com,2016-09-02
+SHE-BE-10027,Gupta Khare and Aggarwal,"Plot 169-C, Peenya Industrial Area Phase 2, BLR 560058",560058,,,Rohan Shetty,06889373467,hayershayak@example.net,2023-03-21
+SHE-BE-10028,Butala Trivedi and Kaur,"Plot 261-D, Electronic City Phase 1, BLR 560100",560100,,,Misha Loke,+916990162720,vaibhav53@example.com,2021-11-24
+SHE-BE-10029,Sidhu-Wable Pvt Ltd,"Plot 60-C, Bommasandra Industrial Area, BLR 560100",560100,,,Ranbir Shetty,04170805310,dasguptakrish@example.org,2018-12-06
+SHE-BE-10030,Bhatnagar Group,"Plot 224-A, Peenya Phase 3, BLR 560058",560058,,,Jivika Chopra,04529912419,dugalkashvi@example.net,2022-09-22
+SHE-BE-10031,Sehgal-Chaudhary Pvt Ltd,"Plot 159-D, Electronic City Phase 2, BLR 560100",560100,SOERJ7154A,,Kiara Sant,3149190586,darshit85@example.org,2023-06-27
+SHE-BE-10032,Bera-Kalita,"Plot 297-E, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,,,Myra Walla,02628498776,samarth31@example.com,2024-01-04
+SHE-BE-10033,Sheth Group,"Plt 227-B, Electronic City Ph 1, 560100",560100,UYTRH6609H,29UYTRH6609H1ZM,Shayak Atwal,05273545494,kuruvillakanav@example.org,2020-06-11
+SHE-BE-10034,Jani Konda and Mall,"Peenya Industrial Area Phase 1, Plot 76-A, Bengaluru",560058,ZPTLX5733E,,Prisha Khanna,7701436349,anika88@example.com,2023-07-30
+SHE-BE-10035,Maharaj Gandhi and Goda,"Peenya Industrial Area Phase 1, Plot 218-B, Bengaluru",560058,,,Purab Dua,03135182337,samaira98@example.net,2021-02-25
+SHE-BE-10036,Thaman and Sons,"Electronic City Phase 2, Plot 259-D, Bengaluru",560100,,,Manikya Gole,+914082400842,abehl@example.net,2021-03-05
+SHE-BE-10037,Khatri-Kannan,"Plt 244-D, Bommasandra Industrial Area, 560100",560100,GQTNQ2022K,,Kabir Bal,07116719022,dharmajan31@example.net,2023-06-03
+SHE-BE-10038,Raju Subramanian and Ranganathan,"Peenya Industrial Area Phase 1, Plot 78-B, Bengaluru",560058,,29DFKIM0837W1ZM,Urvi Lal,07749649909,singhlakshay@example.net,2019-12-06
+SHE-BE-10039,Sahota-Baria,"Electronic City Phase 1, Plot 4-C, Bengaluru",560100,,29KXVNT7842P1ZM,Nakul Chadha,1206797403,renee47@example.org,2020-04-23
+SHE-BE-10040,Subramaniam-Sule,"Plt 208-B, Electronic City Ph 2, 560100",560100,,,Aarna Bhandari,3242102499,advika17@example.net,2021-07-06
+SHE-BE-10041,Jaggi Deshpande and Krishna,"Plt 274-A, Peenya Ph 3, 560058",560058,,,Advika Baria,0659401399,singhalpari@example.com,2017-01-08
+SHE-BE-10042,Keer PLC,"Peenya Industrial Area Phase 1, Plot 220-B, Bengaluru",560058,,,Ranbir Chana,6717565512,zain74@example.net,2023-02-25
+SHE-BE-10043,Badamikaranandbasu Pvt Ltd,"Plot 134-D, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,,,Ojas Edwin,+916808760385,crattan@example.org,2019-10-20
+SHE-BE-10044,Maharaj-Bhatti Pvt Ltd,"Plot 36-A, Bommasandra Industrial Area, BLR 560100",560100,,,Advika Wable,7109324808,obatra@example.org,2024-03-10
+SHE-BE-10045,Sabharwal and Sons,"Plt 11-E, Peenya Industrial Area Ph 1, 560058",560058,,,Saanvi Dhingra,4677378263,darshitdevi@example.com,2022-02-13
+SHE-BE-10046,DEOL TARA AND AGARWAL,"Plot 56-E, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,IRYKS0661Y,29IRYKS0661Y1ZM,Samaira Dixit,9727875588,ukari@example.org,2020-05-26
+SHE-BE-10047,Handa Dada and Varty,"Plt 22-C, Peenya Ph 3, 560058",560058,,,Azad Dutt,7662702895,vohraadvika@example.org,2025-04-15
+SHE-BE-10048,Amble-Sen,"Plot 268-C, Bommasandra Industrial Area, Bengaluru - 560100",560100,,,Yuvraj  Virk,2174596158,odutt@example.net,2024-08-22
+SHE-BE-10049,Badami Ranganathan and Banerjee,"Plot 224-E, Electronic City Phase 1, Bengaluru - 560100",560100,,29WVCWG4630K1ZM,Mohanlal Sani,03161172400,yashvi04@example.com,2022-09-19
+SHE-BE-10050,Bora-Das,"Plot 133-C, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,PWONE2452P,,Jivika Sanghvi,+912219693792,anahiray@example.com,2024-02-27
+SHE-BE-10051,Sama-Agrawal,"Plot 9-A, Electronic City Phase 1, Bengaluru - 560100",560100,KGRJO3953O,,Reyansh Sandhu,2175946474,veervarkey@example.com,2018-02-25
+SHE-BE-10052,Halderplc Pvt Ltd,"Bommasandra Industrial Area, Plot 62-B, Bengaluru",560100,,,Kashvi Divan,4064090974,mahikasuresh@example.com,2020-01-24
+SHE-BE-10053,Chandran Rao and Dass,"Plt 185-B, Bommasandra Industrial Area, 560100",560100,SDBBH9671A,,Mishti Bava,0470952145,mchahal@example.org,2022-07-25
+SHE-BE-10054,Krishna Deshpande and Thakur,"Plot 226-C, Electronic City Phase 1, BLR 560100",560100,BYMVK0601S,,Onkar Tella,04517123685,subramanianvivaan@example.org,2020-11-02
+SHE-BE-10055,Bhatia Karan and Gour,"Plt 61-E, Peenya Industrial Area Ph 1, 560058",560058,,,Keya Halder,5137098593,ravianahi@example.net,2021-06-24
+SHE-BE-10056,Jayaramanbhardwajand Pvt Ltd,"Plt 195-D, Peenya Ph 3, 560058",560058,,,Armaan Doshi,01138267586,zeeshansagar@example.org,2024-08-30
+SHE-BE-10057,Janideyandbabu Pvt Ltd,"Plot 220-C, Electronic City Phase 2, Bengaluru - 560100",560100,BYCTQ2025F,,Madhav Kapadia,03515850643,valaamani@example.org,2019-12-12
+SHE-BE-10058,REDDY RAJU AND ANNE,"Plt 241-C, Electronic City Ph 2, 560100",560100,HHWBG2758G,29HHWBG2758G1ZM,Vedika Ganesan,+912931839335,vedikayohannan@example.net,2016-05-21
+SHE-BE-10059,Varughese-Bora Pvt Ltd,"Plt 77-C, Peenya Ph 3, 560058",560058,,,Hrishita Dass,+911020539502,baiju26@example.net,2018-04-10
+SHE-BE-10060,Balay Khanna and Kapur,"Plot 85-C, Peenya Industrial Area Phase 1, BLR 560058",560058,VXLMH4254T,29VXLMH4254T1ZM,Drishya Rajagopalan,+917839084700,zvaidya@example.com,2018-03-05
+SHE-BE-10061,Sawhney-Kapadia,"Plot 166-E, Electronic City Phase 2, Bengaluru - 560100",560100,CZVOY9620Y,,Dhanush Dyal,2124998569,amani89@example.com,2018-01-10
+SHE-BE-10062,Bhandari Varkey and Sagar,"Electronic City Phase 1, Plot 93-E, Bengaluru",560100,VZMKI1144V,,Adah Kara,+916576615654,indrans71@example.org,2017-10-16
+SHE-BE-10063,Kalita Inc,"Plt 46-C, Peenya Industrial Area Ph 2, 560058",560058,,,Zoya Bhattacharyya,0988516560,kismat45@example.org,2024-12-20
+SHE-BE-10064,Brahmbhatt Ltd,"Plot 105-C, Bommasandra Industrial Area, Bengaluru - 560100",560100,YLSDZ6215R,,Mamooty Vaidya,+915851493689,ramanathannirvi@example.net,2020-11-20
+SHE-BE-10065,Chana LLC,"Plot 237-A, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,,,Shayak Gill,+912296120183,dkadakia@example.com,2019-01-07
+SHE-BE-10066,Dugal-Sen,"Peenya Industrial Area Phase 2, Plot 150-E, Bengaluru",560058,,,Urvi Mander,1022901476,craman@example.com,2020-12-26
+SHE-BE-10067,Shroff PLC,"Plot 242-B, Electronic City Phase 1, Bengaluru - 560100",560100,DEPTD0783Z,29DEPTD0783Z1ZM,Shray Kale,+914978403690,chaudryromil@example.org,2018-09-03
+SHE-BE-10068,DHILLON-GADE,"Peenya Industrial Area Phase 2, Plot 153-E, Bengaluru",560058,RWLMI7398W,29RWLMI7398W1ZM,Aarush Kothari,6226838851,vvenkataraman@example.org,2023-10-05
+SHE-BE-10069,Karpe Inc,"Bommasandra Industrial Area, Plot 211-A, Bengaluru",560100,,29MXJZU6191S1ZM,Kashvi Kala,6641605297,dhruv61@example.org,2023-10-02

@@ -1,0 +1,61 @@
+reg_number,business_name,address,pin_code,pan,gstin,owner_name,phone,email,reg_date
+FAC-2018-4500,Batta Inc,"Plt 244-E, Peenya Industrial Area Ph 1, 560058",560058,NPZYT6736L,29NPZYT6736L1ZM,Sumer Kakar,,,2021-01-28
+FAC-2019-4501,Dash-Vohra Pvt Ltd,"Plot 127-B, Bommasandra Industrial Area, BLR 560100",560100,AOPAS0003Q,29AOPAS0003Q1ZM,Ahana  Swamy,1080132677,,2019-02-21
+FAC-2020-4502,Agarwal-Hayer,"Plt 277-B, Bommasandra Industrial Area, 560100",560100,,,Vardaniya Srinivasan,04687234309,,2017-03-11
+FAC-2021-4503,Khare Krishnamurthy and Varkey,"Bommasandra Industrial Area, Plot 243-D, Bengaluru",560100,CLLMS6904K,,Bhavin Kumar,+912191361939,,2025-03-26
+FAC-2022-4504,De-Chaudry,"Plot 99-B, Peenya Industrial Area Phase 1, BLR 560058",560058,DEMWB8806R,,Nakul Deo,02475107991,,2020-11-06
+FAC-2023-4505,Ghoshinc Pvt Ltd,"Plt 86-D, Peenya Industrial Area Ph 1, 560058",560058,FKBJZ2744X,,Tushar Dhar,+917849808412,,2020-12-21
+FAC-2024-4506,Ramakrishnan-Cheema Pvt Ltd,"Plot 98-C, Bommasandra Industrial Area, Bengaluru - 560100",560100,BTBIB4950Q,29BTBIB4950Q1ZM,Lagan Sankar,4874016400,,2023-11-09
+FAC-2025-4507,Sastry Kala and Mand,"Plot 35-B, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,YOPBC6532V,,Faiyaz Barad,,,2020-08-01
+FAC-2018-4508,Behl Goel and,"Peenya Industrial Area Phase 2, Plot 203-B, Bengaluru",560058,,,Miraya Shere,+913226025634,,2022-11-06
+FAC-2019-4509,VARUGHESE GROUP,"Electronic City Phase 1, Plot 162-A, Bengaluru",560100,QOCNN1302J,29QOCNN1302J1ZM,Krish Taneja,05433036541,,2021-12-21
+FAC-2020-4510,Bhardwaj LLC,"Plot 271-A, Electronic City Phase 2, Bengaluru - 560100",560100,,,Kavya Deo,,,2023-10-04
+FAC-2021-4511,Lad PLC,"Electronic City Phase 2, Plot 54-B, Bengaluru",560100,XTEHF3685I,,Tejas Kale,,,2022-10-15
+FAC-2022-4512,Shere Zacharia and Chahal,"Plot 217-C, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,IDZEL7519W,,Yuvaan Mahal,+914436995777,,2019-03-24
+FAC-2023-4513,Basak Dhar and Kurian,"Plot 299-E, Peenya Industrial Area Phase 2, BLR 560058",560058,DIXUW8221Y,29DIXUW8221Y1ZM,Divij Tank,+914332003791,,2019-08-25
+FAC-2024-4514,Sarin Handa and Kota,"Plot 80-B, Electronic City Phase 2, Bengaluru - 560100",560100,,,Nirvaan Borah,0163287083,,2021-09-26
+FAC-2025-4515,Ramesh-Tandon,"Plt 13-B, Peenya Industrial Area Ph 2, 560058",560058,,,Ira Kapoor,+917743487347,,2020-12-17
+FAC-2018-4516,Dutta-Warrior Pvt Ltd,"Plot 128-C, Electronic City Phase 1, BLR 560100",560100,SJBMF9388H,29SJBMF9388H1ZM,Hiran Borra,+916231665876,,2016-09-02
+FAC-2019-4517,GUPTA KHARE AND AGGARWAL,"Plot 169-C, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,,,Rohan Shetty,06889373467,,2023-03-21
+FAC-2020-4518,Butala Trivedi and Kaur,"Plt 261-D, Electronic City Ph 1, 560100",560100,,,Misha Loke,+916990162720,,2021-11-24
+FAC-2021-4519,Sidhu-Wable Pvt Ltd,"Plot 60-C, Bommasandra Industrial Area, BLR 560100",560100,ZGCLS3653S,29ZGCLS3653S1ZM,Ranbir Shetty,04170805310,,2018-12-06
+FAC-2022-4520,Bhatnagar Group,"Plt 224-A, Peenya Ph 3, 560058",560058,URYTF4996V,,Jivika Chopra,04529912419,,2022-09-22
+FAC-2023-4521,Sehgal-Chaudhary,"Plot 159-D, Electronic City Phase 2, BLR 560100",560100,SOERJ7154A,29SOERJ7154A1ZM,Kiara Sant,3149190586,,2023-06-27
+FAC-2024-4522,BERA-KALITA,"Plot 297-E, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,,,Myra Walla,02628498776,,2024-01-04
+FAC-2025-4523,Shethgroup Pvt Ltd,"Electronic City Phase 1, Plot 227-B, Bengaluru",560100,UYTRH6609H,29UYTRH6609H1ZM,Shayak Atwal,05273545494,,2020-06-11
+FAC-2018-4524,Jani Konda and,"Peenya Industrial Area Phase 1, Plot 76-A, Bengaluru",560058,ZPTLX5733E,29ZPTLX5733E1ZM,Prisha Khanna,7701436349,,2023-07-30
+FAC-2019-4525,Maharaj Gandhi and,"Plt 218-B, Peenya Industrial Area Ph 1, 560058",560058,YNBGW4869T,29YNBGW4869T1ZM,Purab Dua,,,2021-02-25
+FAC-2020-4526,THAMAN AND SONS,"Plt 259-D, Electronic City Ph 2, 560100",560100,,,Manikya Gole,+914082400842,,2021-03-05
+FAC-2021-4527,Khatri-Kannan,"Bommasandra Industrial Area, Plot 244-D, Bengaluru",560100,GQTNQ2022K,,Kabir Bal,07116719022,,2023-06-03
+FAC-2022-4528,Raju Subramanian and Ranganathan,"Plt 78-B, Peenya Industrial Area Ph 1, 560058",560058,DFKIM0837W,29DFKIM0837W1ZM,Urvi Lal,07749649909,,2019-12-06
+FAC-2023-4529,Sahota-Baria,"Plot 4-C, Electronic City Phase 1, Bengaluru - 560100",560100,KXVNT7842P,29KXVNT7842P1ZM,Nakul Chadha,1206797403,,2020-04-23
+FAC-2024-4530,Subramaniam-Sule,"Plot 208-B, Electronic City Phase 2, Bengaluru - 560100",560100,,,Aarna Bhandari,3242102499,,2021-07-06
+FAC-2025-4531,Jaggideshpandeandkri Pvt Ltd,"Plt 274-A, Peenya Ph 3, 560058",560058,,,Advika Baria,0659401399,,2017-01-08
+FAC-2018-4532,Keerplc Pvt Ltd,"Plot 220-B, Peenya Industrial Area Phase 1, Bengaluru - 560058",560058,,,Ranbir Chana,6717565512,,2023-02-25
+FAC-2019-4533,Badami Karan and,"Peenya Industrial Area Phase 1, Plot 134-D, Bengaluru",560058,LIWHY4847B,,Ojas Edwin,+916808760385,,2019-10-20
+FAC-2020-4534,Maharaj-Bhatti,"Plot 36-A, Bommasandra Industrial Area, Bengaluru - 560100",560100,,,Advika Wable,7109324808,,2024-03-10
+FAC-2021-4535,Sabharwalandsons Pvt Ltd,"Plot 11-E, Peenya Industrial Area Phase 1, BLR 560058",560058,DROFS7167D,,Saanvi Dhingra,4677378263,,2022-02-13
+FAC-2022-4536,Deol Tara and Agarwal,"Plot 56-E, Peenya Industrial Area Phase 2, BLR 560058",560058,IRYKS0661Y,29IRYKS0661Y1ZM,Samaira Dixit,,,2020-05-26
+FAC-2023-4537,Handa Dada and Varty,"Plot 22-C, Peenya Phase 3, Bengaluru - 560058",560058,RBQAK4438O,,Azad Dutt,,,2025-04-15
+FAC-2024-4538,Amble-Sen Pvt Ltd,"Plt 268-C, Bommasandra Industrial Area, 560100",560100,,,Yuvraj  Virk,,,2024-08-22
+FAC-2025-4539,Badami Ranganathan and Banerjee,"Plot 224-E, Electronic City Phase 1, BLR 560100",560100,WVCWG4630K,29WVCWG4630K1ZM,Mohanlal Sani,03161172400,,2022-09-19
+FAC-2018-4540,BORA-DAS,"Peenya Industrial Area Phase 2, Plot 133-C, Bengaluru",560058,PWONE2452P,29PWONE2452P1ZM,Jivika Sanghvi,,,2024-02-27
+FAC-2019-4541,Sama-Agrawal,"Plot 9-A, Electronic City Phase 1, BLR 560100",560100,KGRJO3953O,29KGRJO3953O1ZM,Reyansh Sandhu,2175946474,,2018-02-25
+FAC-2020-4542,Halder PLC,"Bommasandra Industrial Area, Plot 62-B, Bengaluru",560100,TYRET2575D,,Kashvi Divan,4064090974,,2020-01-24
+FAC-2021-4543,Chandran Rao and Dass,"Plot 185-B, Bommasandra Industrial Area, Bengaluru - 560100",560100,SDBBH9671A,29SDBBH9671A1ZM,Mishti Bava,0470952145,,2022-07-25
+FAC-2022-4544,KRISHNA DESHPANDE AND THAKUR,"Plt 226-C, Electronic City Ph 1, 560100",560100,BYMVK0601S,,Onkar Tella,04517123685,,2020-11-02
+FAC-2023-4545,Bhatia Karan and Gour,"Peenya Industrial Area Phase 1, Plot 61-E, Bengaluru",560058,,,Keya Halder,5137098593,,2021-06-24
+FAC-2024-4546,JAYARAMAN BHARDWAJ AND BOASE,"Plot 195-D, Peenya Phase 3, BLR 560058",560058,,,Armaan Doshi,01138267586,,2024-08-30
+FAC-2025-4547,Jani Dey and,"Plot 220-C, Electronic City Phase 2, BLR 560100",560100,BYCTQ2025F,29BYCTQ2025F1ZM,Madhav Kapadia,,,2019-12-12
+FAC-2018-4548,Reddy Raju and Anne,"Electronic City Phase 2, Plot 241-C, Bengaluru",560100,HHWBG2758G,29HHWBG2758G1ZM,Vedika Ganesan,+912931839335,,2016-05-21
+FAC-2019-4549,VARUGHESE-BORA,"Plot 77-C, Peenya Phase 3, Bengaluru - 560058",560058,,,Hrishita Dass,+911020539502,,2018-04-10
+FAC-2020-4550,Balay Khanna and Kapur,"Plt 85-C, Peenya Industrial Area Ph 1, 560058",560058,VXLMH4254T,29VXLMH4254T1ZM,Drishya Rajagopalan,,,2018-03-05
+FAC-2021-4551,SAWHNEY-KAPADIA,"Plot 166-E, Electronic City Phase 2, Bengaluru - 560100",560100,CZVOY9620Y,29CZVOY9620Y1ZM,Dhanush Dyal,2124998569,,2018-01-10
+FAC-2022-4552,Bhandari Varkey and Sagar,"Plt 93-E, Electronic City Ph 1, 560100",560100,VZMKI1144V,,Adah Kara,+916576615654,,2017-10-16
+FAC-2023-4553,Kalita Inc,"Plot 46-C, Peenya Industrial Area Phase 2, BLR 560058",560058,DUWVA8405T,,Zoya Bhattacharyya,,,2024-12-20
+FAC-2024-4554,Brahmbhatt Ltd,"Bommasandra Industrial Area, Plot 105-C, Bengaluru",560100,YLSDZ6215R,29YLSDZ6215R1ZM,Mamooty Vaidya,+915851493689,,2020-11-20
+FAC-2025-4555,Chana LLC,"Plot 237-A, Peenya Industrial Area Phase 1, BLR 560058",560058,,,Shayak Gill,+912296120183,,2019-01-07
+FAC-2018-4556,Dugal-Sen Pvt Ltd,"Plot 150-E, Peenya Industrial Area Phase 2, Bengaluru - 560058",560058,,,Urvi Mander,1022901476,,2020-12-26
+FAC-2019-4557,Shroff PLC,"Plot 242-B, Electronic City Phase 1, Bengaluru - 560100",560100,DEPTD0783Z,29DEPTD0783Z1ZM,Shray Kale,+914978403690,,2018-09-03
+FAC-2020-4558,Dhillon-Gade Pvt Ltd,"Plot 153-E, Peenya Industrial Area Phase 2, BLR 560058",560058,RWLMI7398W,29RWLMI7398W1ZM,Aarush Kothari,6226838851,,2023-10-05
+FAC-2021-4559,Karpe Inc,"Plot 211-A, Bommasandra Industrial Area, BLR 560100",560100,MXJZU6191S,29MXJZU6191S1ZM,Kashvi Kala,6641605297,,2023-10-02
