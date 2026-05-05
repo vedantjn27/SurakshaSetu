@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-border;
+}
+
+html {
+  @apply scroll-smooth bg-background;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rounding-mode" 0;
+}
+
+/* Color Scheme - Enterprise Professional Blue Theme */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 20% 15%;
+  --primary: 217 100% 44%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 160 84% 39%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 0 84% 60%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --muted: 220 13% 91%;
+  --muted-foreground: 217 33% 43%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 217 100% 44%;
+  --radius: 0.5rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 220 20% 8%;
+    --foreground: 220 13% 91%;
+    --primary: 217 100% 58%;
+    --primary-foreground: 220 20% 8%;
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 20% 8%;
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 13% 70%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 217 100% 58%;
+  }
+}
+
+/* Typography */
+@layer base {
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+  h3 {
+    @apply text-2xl font-bold tracking-tight;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
+  h5 {
+    @apply text-lg font-semibold;
+  }
+  h6 {
+    @apply text-base font-semibold;
+  }
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+/* Smooth transitions */
+@layer components {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-smooth;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-muted text-foreground rounded-lg font-semibold hover:bg-muted/80 transition-smooth;
+  }
+
+  .card-base {
+    @apply rounded-lg border border-border bg-background p-6 transition-smooth;
+  }
+
+  .card-hover {
+    @apply card-base hover:shadow-lg hover:border-primary/50 cursor-pointer;
+  }
+
+  .input-base {
+    @apply w-full px-4 py-2 rounded-lg border border-border bg-input text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-smooth;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
