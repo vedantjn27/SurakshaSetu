@@ -2,9 +2,22 @@
 
 <!-- Animated Banner -->
 <picture>
-  <img src="https://readme-typing-svg.demolab.com?font=Syne&weight=800&size=52&duration=3000&pause=1200&color=0F766E&center=true&vCenter=true&width=800&height=90&lines=SurakshaSetu+%F0%9F%9B%A1%EF%B8%8F;Secure+Business+Identity+at+Scale;Federated+UBID+Platform." alt="SurakshaSetu" />
+  <!-- Main Title -->
+  <img 
+    src="https://readme-typing-svg.demolab.com?font=Syne&weight=800&size=52&duration=3000&pause=1200&color=0F766E&center=true&vCenter=true&width=800&height=70&lines=SurakshaSetu+%F0%9F%9B%A1%EF%B8%8F" 
+    alt="SurakshaSetu" 
+  />
+  
+  <br/>
+
+  <!-- Subtitle -->
+  <img 
+    src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=28&duration=3000&pause=1200&color=0F766E&center=true&vCenter=true&width=800&height=45&lines=Secure+Business+Identity+at+Scale;Federated+UBID+Platform." 
+    alt="Subtitle" 
+  />
 </picture>
 
+</div>
 <br/><br/>
 
 <img src="https://img.shields.io/badge/Version-1.0.0-0f766e?style=for-the-badge&labelColor=0a0f0f&logo=shield&logoColor=white" />
