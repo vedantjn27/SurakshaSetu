@@ -81,7 +81,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col items-end hidden sm:flex">
               <span className="text-sm font-semibold">{user?.username}</span>
-              <span className="text-xs text-muted-foreground uppercase">{t(`roles.${user?.role}`, user?.role)}</span>
+              <span className="text-xs text-muted-foreground uppercase">{t(`roles.${user?.role ?? "undefined"}`, {defaultValue: user?.role ?? "USER",})}</span>
             </div>
           </div>
 
