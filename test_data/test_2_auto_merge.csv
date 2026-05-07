@@ -1,0 +1,3 @@
+reg_number,business_name,address,pin_code,pan,gstin,owner_name,phone,email,reg_date
+FAC_1,Green Grocers Factory,101 Ring Road,560040,GRNGR1234H,29GRNGR1234H1Z1,Kavita Iyer,9888888881,kavita@green.in,2023-10-02
+FAC_2,Tech Guru Assembly,201 Outer Ring Road,560037,TCHGR5678J,29TCHGR5678J1Z2,Amit Patel,9888888882,amit@techguru.com,2023-11-06

@@ -1,0 +1,3 @@
+department,source_id,event_type,event_date,remarks
+shop_establishment,NEW_SHOP_1,licence_renewal,2024-05-01T10:00:00Z,Renewed
+factories,FAC_2,inspection_pass,2024-05-05T14:30:00Z,All clear

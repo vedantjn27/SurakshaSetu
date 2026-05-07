@@ -1,0 +1,4 @@
+reg_number,business_name,address,pin_code,pan,gstin,owner_name,phone,email,reg_date
+FACT001,Precision Engineering Works,Plot 14 Peenya Industrial Area,560058,BGHIJ5678K,29BGHIJ5678K1Z2,Anand Kumar,8877665544,aw@precision.co.in,2018-06-01
+FACT002,Karnataka Steel Industries,Shed 7 Peenya Phase 2,560058,CDEFG6789L,29CDEFG6789L1Z4,Sundar Rajan,7766554433,info@ksi.in,2016-03-15
+FACT003,Modern Plastics Pvt Ltd,Plot 22 Peenya,560058,BGHIJ5678K,,Anand Kumar,8877665544,,2019-09-20
