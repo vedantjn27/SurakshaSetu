@@ -1,16 +1,44 @@
 from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel
 from datetime import datetime, timezone
+from typing import List, Optional
 from app.models.ubid import UBIDDocument
 from app.models.master_record import MasterRecord
 from app.models.review_item import ReviewItem
 from app.models.orphan_event import OrphanEvent
 from app.models.audit_log import AuditLog
 from app.models.labelled_pair import LabelledPair
+from app.models.user import User
 from app.core.auth import require_role
 import re
 
 router = APIRouter()
+
+
+class UserListItem(BaseModel):
+    username: str
+    role: str
+    full_name: Optional[str] = None
+    email: Optional[str] = None
+    is_active: bool = True
+    created_at: Optional[str] = None
+
+
+@router.get("/users", response_model=List[UserListItem])
+async def list_users(_=Depends(require_role("admin"))):
+    """Return all system users — admin only, password hash never included."""
+    users = await User.find_all().to_list()
+    return [
+        UserListItem(
+            username=u.username,
+            role=u.role,
+            full_name=u.full_name,
+            email=u.email,
+            is_active=u.is_active,
+            created_at=u.created_at.isoformat() if u.created_at else None,
+        )
+        for u in users
+    ]
 
 
 class ScrambleRequest(BaseModel):
@@ -60,7 +88,7 @@ async def audit_log(
     ubid: str = Query(None),
     limit: int = Query(50, le=200),
     offset: int = Query(0),
-    _=Depends(require_role("admin", "reviewer")),
+    _=Depends(require_role("admin", "reviewer", "analyst")),
 ):
     """Paginated audit log with filters."""
     filters = {}
@@ -212,3 +240,57 @@ async def trigger_retrain(_=Depends(require_role("admin"))):
         "model_path": model_path,
         "feature_weights": dict(zip(feature_order, model.coef_[0].tolist())),
     }
+
+
+@router.get("/records")
+async def list_records(
+    limit: int = Query(20, le=100),
+    offset: int = Query(0),
+    department: Optional[str] = Query(None),
+    _=Depends(require_role("admin", "reviewer", "analyst")),
+):
+    """
+    List ingested master records alongside their scrambled counterparts.
+    Used by the Privacy Playground to show field-level scrambled vs raw PII.
+    """
+    from app.models.scrambled_record import ScrambledRecord
+
+    filters = {}
+    if department:
+        filters["department"] = department
+
+    records = await MasterRecord.find(filters).skip(offset).limit(limit).to_list()
+    total = await MasterRecord.find(filters).count()
+
+    result = []
+    for r in records:
+        scr = await ScrambledRecord.find_one(
+            ScrambledRecord.master_record_id == str(r.id)
+        )
+        result.append({
+            "id": str(r.id),
+            "department": r.department,
+            "source_id": r.source_id,
+            "ubid": r.ubid,
+            "raw": {
+                "business_name": r.raw_business_name,
+                "pan": r.raw_pan,
+                "gstin": r.raw_gstin,
+                "phone": r.raw_phone,
+                "email": r.raw_email,
+                "owner": r.raw_owner_name,
+                "address": r.raw_address,
+                "pin_code": r.raw_pin_code,
+            },
+            "scrambled": {
+                "business_name": scr.scr_business_name,
+                "pan": scr.scr_pan,
+                "gstin": scr.scr_gstin,
+                "phone": scr.scr_phone,
+                "email": scr.scr_email,
+                "owner": scr.scr_owner_name,
+                "address": scr.scr_address,
+            } if scr else None,
+        })
+
+    return {"total": total, "records": result}

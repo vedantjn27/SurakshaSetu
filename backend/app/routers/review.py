@@ -227,12 +227,22 @@ async def ai_suggest_orphan(
 
     candidate_data = []
     for c in candidates:
+        names = set()
+        phones = set()
+        for lr in c.linked_records:
+            if "master_record_id" in lr:
+                mr = await MasterRecord.get(lr["master_record_id"])
+                if mr:
+                    if mr.raw_owner_name: names.add(mr.raw_owner_name)
+                    elif mr.norm_name: names.add(mr.norm_name)
+                    if mr.raw_phone: phones.add(mr.raw_phone)
+                    
         candidate_data.append({
             "ubid": c.ubid,
             "pan": c.pan_anchor,
-            "gstin": c.gstin_anchor,
+            "business_names": list(names),
+            "phones": list(phones),
             "activity_status": c.activity_status,
-            "records_count": len(c.linked_records)
         })
 
     settings = get_settings()

@@ -74,7 +74,12 @@ async def classify_ubid(ubid_doc: UBIDDocument) -> dict:
             return _build_result(ubid_doc, status, total_score, evidence_lines)
 
     # Classify
-    if total_score >= active_min:
+    # If no events have been joined yet, treat as Active (newly registered business
+    # is presumed active until we get evidence it's dormant/closed)
+    if not events:
+        status = "Active"
+        evidence_lines = ["No activity events yet — newly registered, presumed Active"]
+    elif total_score >= active_min:
         status = "Active"
     elif total_score <= closed_max:
         status = "Closed"

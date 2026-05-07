@@ -6,7 +6,7 @@
 
 matching:
   auto_link_threshold: 0.85   # score >= this → auto-link
-  review_threshold: 0.50      # score between this and auto_link → human review
+  review_threshold: 0.40      # score between this and auto_link → human review
   # score < review_threshold → keep separate
 
   feature_weights:

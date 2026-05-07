@@ -18,7 +18,7 @@ def _generate_ubid(pin_code: Optional[str]) -> str:
     return f"UBID-KA-{pin}-{short}"
 
 
-async def create_ubid_for_record(record: MasterRecord) -> UBIDDocument:
+async def create_ubid_for_record(record: MasterRecord, explanation: Optional[str] = "Singleton creation") -> UBIDDocument:
     """Create a new singleton UBID for a single record."""
     ubid_id = _generate_ubid(record.norm_pin_code)
     linked = [{
@@ -27,6 +27,7 @@ async def create_ubid_for_record(record: MasterRecord) -> UBIDDocument:
         "master_record_id": str(record.id),
         "confidence": 1.0,
         "link_type": "singleton",
+        "explanation": explanation,
         "linked_at": datetime.now(timezone.utc).isoformat(),
     }]
     doc = UBIDDocument(
@@ -57,6 +58,7 @@ async def merge_into_ubid(
     confidence: float,
     link_type: str,
     reviewer_id: Optional[str] = None,
+    explanation: Optional[str] = None,
 ) -> UBIDDocument:
     """Add a record to an existing UBID cluster."""
     ubid.linked_records.append({
@@ -65,6 +67,7 @@ async def merge_into_ubid(
         "master_record_id": str(record.id),
         "confidence": confidence,
         "link_type": link_type,
+        "explanation": explanation,
         "reviewer_id": reviewer_id,
         "linked_at": datetime.now(timezone.utc).isoformat(),
     })
@@ -79,6 +82,7 @@ async def merge_into_ubid(
         "record_ids": [str(record.id)],
         "confidence": confidence,
         "link_type": link_type,
+        "explanation": explanation,
         "performed_by": reviewer_id or "system",
         "timestamp": datetime.now(timezone.utc).isoformat(),
     })
@@ -151,6 +155,7 @@ async def get_or_create_ubid_for_records(
     confidence: float,
     link_type: str = "auto",
     reviewer_id: Optional[str] = None,
+    explanation: Optional[str] = None,
 ) -> UBIDDocument:
     """
     Merge two records into a shared UBID.
@@ -167,7 +172,7 @@ async def get_or_create_ubid_for_records(
         for lr in source.linked_records:
             mr = await MasterRecord.get(lr["master_record_id"])
             if mr:
-                await merge_into_ubid(target, mr, confidence, link_type, reviewer_id)
+                await merge_into_ubid(target, mr, confidence, link_type, reviewer_id, explanation)
         source.status = "merged_into"
         source.merge_history.append({
             "action": "merged_into",
@@ -179,10 +184,10 @@ async def get_or_create_ubid_for_records(
         return target
 
     if ubid_a:
-        return await merge_into_ubid(ubid_a, record_b, confidence, link_type, reviewer_id)
+        return await merge_into_ubid(ubid_a, record_b, confidence, link_type, reviewer_id, explanation)
     if ubid_b:
-        return await merge_into_ubid(ubid_b, record_a, confidence, link_type, reviewer_id)
+        return await merge_into_ubid(ubid_b, record_a, confidence, link_type, reviewer_id, explanation)
 
     # Neither has a UBID — create new
-    new_ubid = await create_ubid_for_record(record_a)
-    return await merge_into_ubid(new_ubid, record_b, confidence, link_type, reviewer_id)
+    new_ubid = await create_ubid_for_record(record_a, explanation)
+    return await merge_into_ubid(new_ubid, record_b, confidence, link_type, reviewer_id, explanation)

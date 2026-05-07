@@ -4,8 +4,9 @@ from datetime import datetime, timezone
 from typing import Optional
 from app.services.ingest_pipeline import run_ingestion_pipeline
 from app.services.event_joiner import join_event
-from app.core.auth import require_role
+from app.core.auth import require_role, get_current_user
 from app.config import get_settings
+from app.models.audit_log import AuditLog
 
 router = APIRouter()
 
@@ -13,7 +14,7 @@ router = APIRouter()
 _job_status: dict = {}
 
 
-async def _pipeline_task(department: str, content: bytes, job_id: str):
+async def _pipeline_task(department: str, content: bytes, job_id: str, performed_by: str = "system"):
     _job_status[job_id] = {"status": "running", "started_at": datetime.now(timezone.utc).isoformat()}
     try:
         result = await run_ingestion_pipeline(department, content, job_id)
@@ -22,6 +23,15 @@ async def _pipeline_task(department: str, content: bytes, job_id: str):
             "result": result,
             "completed_at": datetime.now(timezone.utc).isoformat(),
         }
+        # Write audit log for the ingestion job
+        await AuditLog(
+            decision_type="data_ingestion",
+            entity_ids=[job_id],
+            ubid=None,
+            outcome=f"ingested={result.get('ingested',0)} skipped={result.get('skipped_duplicates',0)} new_ubids={result.get('new_ubids',0)}",
+            performed_by=performed_by,
+            confidence_score=None,
+        ).insert()
     except Exception as e:
         _job_status[job_id] = {"status": "failed", "error": str(e)}
 
@@ -31,7 +41,7 @@ async def ingest_csv(
     background_tasks: BackgroundTasks,
     department: str = Query(..., description="Department ID e.g. factories, kspcb, labour, shop_establishment"),
     file: UploadFile = File(..., description="CSV file with department master data"),
-    _=Depends(require_role("admin", "reviewer")),
+    current_user=Depends(require_role("admin", "reviewer")),
 ):
     """Upload a department CSV. Processing runs in background."""
     rules = get_settings().rules
@@ -42,7 +52,7 @@ async def ingest_csv(
     content = await file.read()
     job_id = str(uuid.uuid4())[:8]
     _job_status[job_id] = {"status": "queued"}
-    background_tasks.add_task(_pipeline_task, department, content, job_id)
+    background_tasks.add_task(_pipeline_task, department, content, job_id, current_user.username)
 
     return {
         "job_id": job_id,
@@ -64,9 +74,8 @@ async def ingest_status(job_id: str):
 
 @router.post("/events")
 async def ingest_events(
-    background_tasks: BackgroundTasks,
     file: UploadFile = File(..., description="Events CSV: department,source_id,event_type,event_date,metadata_json"),
-    _=Depends(require_role("admin", "reviewer")),
+    current_user=Depends(require_role("admin", "reviewer")),
 ):
     """
     Upload activity events CSV.
@@ -107,5 +116,15 @@ async def ingest_events(
                 results["orphaned"] += 1
         except Exception as e:
             results["errors"] += 1
+
+    # Write audit log for the events ingestion
+    await AuditLog(
+        decision_type="event_ingestion",
+        entity_ids=[],
+        ubid=None,
+        outcome=f"joined={results['joined']} orphaned={results['orphaned']} errors={results['errors']}",
+        performed_by=current_user.username,
+        confidence_score=None,
+    ).insert()
 
     return {"status": "completed", **results}

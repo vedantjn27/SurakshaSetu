@@ -24,6 +24,7 @@ from app.services.matcher import compute_features, has_identifier_match
 from app.services.scorer import compute_score, build_explanation
 from app.services.resolver import resolve_pair
 from app.services.ubid_manager import get_or_create_ubid_for_records, create_ubid_for_record
+from app.services.classifier import classify_ubid
 from app.core.logger import logger
 
 
@@ -39,7 +40,7 @@ async def run_ingestion_pipeline(
 ) -> dict:
     """
     Full pipeline for one department CSV upload.
-    Returns summary stats.
+    Returns summary stats and details.
     """
     rules = get_settings().rules
     dept_cfg = rules["departments"].get(department)
@@ -53,15 +54,25 @@ async def run_ingestion_pipeline(
     ingested = 0
     skipped = 0
     records: List[MasterRecord] = []
+    details = []
 
     for _, row in df.iterrows():
         row_dict = row.where(pd.notna(row), None).to_dict()
         source_id = str(row_dict.get(id_field, "")).strip()
+        raw_name = str(row_dict.get("business_name", "") or "")
+        
         if not source_id:
             skipped += 1
+            details.append({
+                "source_id": "N/A",
+                "business_name": raw_name,
+                "decision": "skipped",
+                "reason": "Missing source_id",
+                "ubid": None,
+                "confidence": None
+            })
             continue
 
-        raw_name = str(row_dict.get("business_name", "") or "")
         raw_address = str(row_dict.get("address", "") or "")
         raw_pin = str(row_dict.get("pin_code", "") or "")
         raw_pan = row_dict.get("pan")
@@ -76,6 +87,14 @@ async def run_ingestion_pipeline(
         )
         if existing:
             skipped += 1
+            details.append({
+                "source_id": source_id,
+                "business_name": raw_name,
+                "decision": "skipped",
+                "reason": "Exact duplicate already exists in department data",
+                "ubid": existing.ubid,
+                "confidence": 1.0
+            })
             continue
 
         # Normalise name
@@ -142,12 +161,17 @@ async def run_ingestion_pipeline(
 
     # Run matching pipeline
     match_stats = await _run_matching(records)
+    
+    # Extend details with match details
+    if "record_details" in match_stats:
+        details.extend(match_stats.pop("record_details"))
 
     return {
         "job_id": job_id,
         "department": department,
         "ingested": ingested,
         "skipped_duplicates": skipped,
+        "details": details,
         **match_stats,
     }
 
@@ -155,7 +179,7 @@ async def run_ingestion_pipeline(
 async def _run_matching(new_records: List[MasterRecord]) -> dict:
     """Match newly ingested records against all existing records."""
     if not new_records:
-        return {"auto_linked": 0, "sent_to_review": 0, "kept_separate": 0}
+        return {"auto_linked": 0, "sent_to_review": 0, "kept_separate": 0, "record_details": []}
 
     # Load all records for blocking (pin-code filtered for efficiency)
     pin_codes = list({r.norm_pin_code for r in new_records if r.norm_pin_code})
@@ -167,6 +191,10 @@ async def _run_matching(new_records: List[MasterRecord]) -> dict:
     logger.info(f"Generated {len(pairs)} candidate pairs from {len(all_records)} records")
 
     auto_linked = sent_to_review = kept_separate = 0
+    new_ubids = 0
+    
+    # Map to track state of each new record
+    record_state = {}
 
     for r1, r2 in pairs:
         # Skip if already in same UBID
@@ -179,23 +207,73 @@ async def _run_matching(new_records: List[MasterRecord]) -> dict:
 
         result = await resolve_pair(r1, r2, features, score, explanation, method)
 
+        is_r1_new = any(r.id == r1.id for r in new_records)
+        is_r2_new = any(r.id == r2.id for r in new_records)
+
         if result["decision"] == "auto_link":
             link_type = "pan_anchor" if has_identifier_match(features) else "auto"
-            await get_or_create_ubid_for_records(r1, r2, score, link_type)
+            ubid_doc = await get_or_create_ubid_for_records(r1, r2, score, link_type, None, explanation)
+            # Immediately classify so activity_status is set
+            await classify_ubid(ubid_doc)
             auto_linked += 1
+            
+            if is_r1_new:
+                record_state[str(r1.id)] = {"decision": "merged", "reason": explanation, "ubid": ubid_doc.ubid, "confidence": score}
+            if is_r2_new:
+                record_state[str(r2.id)] = {"decision": "merged", "reason": explanation, "ubid": ubid_doc.ubid, "confidence": score}
         elif result["decision"] == "review":
             sent_to_review += 1
+            if is_r1_new and str(r1.id) not in record_state:
+                record_state[str(r1.id)] = {"decision": "review", "reason": explanation, "ubid": None, "confidence": score}
+            if is_r2_new and str(r2.id) not in record_state:
+                record_state[str(r2.id)] = {"decision": "review", "reason": explanation, "ubid": None, "confidence": score}
         else:
             kept_separate += 1
 
-    # Assign singleton UBIDs to unlinked records
+    # Assign singleton UBIDs to unlinked records and classify them
+    record_details = []
     for record in new_records:
         await record.sync()
+        rec_id = str(record.id)
+        
         if not record.ubid:
-            await create_ubid_for_record(record)
+            singleton = await create_ubid_for_record(record)
+            await classify_ubid(singleton)
+            new_ubids += 1
+            
+            if rec_id in record_state and record_state[rec_id]["decision"] == "review":
+                # It was sent to review, so it gets a temporary singleton UBID
+                record_state[rec_id]["ubid"] = singleton.ubid
+            else:
+                # It was not matched to anything above threshold
+                record_state[rec_id] = {
+                    "decision": "new", 
+                    "reason": "No matching records found above threshold", 
+                    "ubid": singleton.ubid, 
+                    "confidence": 1.0
+                }
+        
+        # Populate details for this record
+        state = record_state.get(rec_id, {
+            "decision": "new",
+            "reason": "Assigned to new UBID",
+            "ubid": record.ubid,
+            "confidence": 1.0
+        })
+        
+        record_details.append({
+            "source_id": record.source_id,
+            "business_name": record.raw_business_name,
+            "decision": state["decision"],
+            "reason": state["reason"],
+            "ubid": state["ubid"],
+            "confidence": state["confidence"]
+        })
 
     return {
         "auto_linked": auto_linked,
         "sent_to_review": sent_to_review,
         "kept_separate": kept_separate,
+        "new_ubids": new_ubids,
+        "record_details": record_details
     }

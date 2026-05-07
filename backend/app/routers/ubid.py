@@ -36,6 +36,7 @@ async def list_ubids(
                 "status": d.status,
                 "pan_anchor": d.pan_anchor,
                 "activity_status": d.activity_status,
+                "activity_score": d.activity_score,
                 "linked_records_count": len(d.linked_records),
                 "created_at": d.created_at.isoformat(),
             }

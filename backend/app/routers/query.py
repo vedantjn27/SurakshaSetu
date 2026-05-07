@@ -50,14 +50,23 @@ async def cross_system_query(
         # PIN code filter — check linked records
         if pin_code:
             from app.models.master_record import MasterRecord
+            from beanie import PydanticObjectId
+            # Normalize the pin_code input (remove spaces/dashes)
+            pin_normalized = pin_code.replace(" ", "").replace("-", "").strip()
             master_ids = [lr.get("master_record_id") for lr in ubid_doc.linked_records]
             pin_match = False
             for mid in master_ids:
-                if mid:
-                    mr = await MasterRecord.get(mid)
-                    if mr and mr.norm_pin_code == pin_code:
-                        pin_match = True
-                        break
+                if not mid:
+                    continue
+                try:
+                    mr = await MasterRecord.find_one({"_id": PydanticObjectId(mid)})
+                    if mr:
+                        mr_pin = (mr.norm_pin_code or mr.raw_pin_code or "").strip()
+                        if mr_pin == pin_normalized or mr_pin.replace(" ", "") == pin_normalized:
+                            pin_match = True
+                            break
+                except Exception:
+                    continue
             if not pin_match:
                 continue
 
