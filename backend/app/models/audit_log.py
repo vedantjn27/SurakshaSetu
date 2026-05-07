@@ -9,7 +9,7 @@ class AuditLog(Document):
 
     decision_type: str          # auto_link | keep_separate | activity_classification | merge_reverted
     entity_ids: list            # record IDs or UBID IDs involved
-    ubid: Optional[str] = None
+    ubid: Optional[str] = None 
 
     # Decision details
     confidence_score: Optional[float] = None
